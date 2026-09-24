@@ -43,7 +43,7 @@
   <g transform="translate(35,1105)"><use href="#channel"/><rect x="18" y="52" width="240" height="38" rx="8" fill="#dff1ff" stroke="#2469a5" stroke-width="2"/><text x="34" y="79" class="label">通道 3：FSR3 → P78</text><text x="850" y="410" class="small">输出：R5=4.7kΩ，C1=100nF</text><path d="M1103 239h30" class="analog"/><rect x="1133" y="214" width="58" height="42" rx="3" class="res"/><text x="1141" y="241" class="tiny">R5</text><text x="1200" y="241" class="tiny">4.7kΩ</text><path d="M1191 235h55" class="analog"/><circle cx="1246" cy="235" r="5" class="node"/><path d="M1246 235v40" class="wire"/><use href="#cap" x="1246" y="295"/><path d="M1246 320v12" class="wire"/><use href="#ground" x="1246" y="332"/><path d="M1246 235h110" class="logic"/><text x="1265" y="222" class="label">OUT3（0/3.3 V）</text></g>
 
   <!-- FPGA -->
-  <rect x="1430" y="190" width="455" height="1040" rx="18" class="fpga"/>
+  <rect x="1430" y="190" width="455" height="1200" rx="18" class="fpga"/>
   <text x="1657" y="240" text-anchor="middle" class="section">U4：XC3S50AN FPGA</text>
   <text x="1657" y="273" text-anchor="middle" class="small">器件：xc3s50an-5tqg144</text>
   <rect x="1475" y="325" width="365" height="370" rx="10" class="box"/>
