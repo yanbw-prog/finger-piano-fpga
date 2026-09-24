@@ -1,0 +1,20 @@
+# Xilinx ISE generated files
+*.bit
+*.bgn
+*.drc
+*.lso
+*.ncd
+*.ngc
+*.ngd
+*.pad
+*.par
+*.pcf
+*.xrpt
+*.xpi
+*.log
+*.wdb
+*.zip
+xlnx_auto_0_xdb/
+_ngo/
+_impact/
+planAhead_run_*/
