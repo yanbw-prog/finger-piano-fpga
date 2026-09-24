@@ -1,0 +1,7 @@
+# 验收三实际接线约束。器件封装、速度等级在ISE建工程时须与目标板芯片丝印一致。
+NET "clk_2m"    LOC = "P124" | IOSTANDARD = LVCMOS33;
+NET "A"         LOC = "P76"  | IOSTANDARD = LVCMOS33;
+NET "B"         LOC = "P77"  | IOSTANDARD = LVCMOS33;
+NET "C"         LOC = "P78"  | IOSTANDARD = LVCMOS33;
+NET "audio_out" LOC = "P90"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+
