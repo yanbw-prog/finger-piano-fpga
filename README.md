@@ -52,8 +52,19 @@ FSR × 3 → TL084 信号调理 × 3 → FPGA (P76/P77/P78)
 - [docs/ISE生成bit与烧录操作单.md](docs/ISE生成bit与烧录操作单.md)：从 ISE 工程到 `.bit`、烧录的操作说明
 - [schematics/](schematics)：系统电路图、RTL 图与 LM386 功放图
 
+## 实物与验收照片
+
+![完整实物图](hardware/overall-hardware.jpg)
+
+图：三路传感器调理电路、FPGA、时钟、LM386 与扬声器的整体搭建实物图。
+
+![验收三调测实物图](hardware/acceptance3-test-setup.jpg)
+
+图：验收三调测时的实际连接状态。
+
 ## 使用说明
 
 本工程面向 Xilinx ISE 14.7，目标器件为 `xc3s50an-5tqg144`。新建工程后加入 `src/finger_piano.v` 和 `constraints/finger_piano.ucf`，综合、实现并生成 `.bit` 文件。详细操作见上面的 ISE 文档。
 
 > 硬件接线前应先断电核对，FPGA I/O 只能接入 3.3 V 逻辑电平，所有模块必须共地。
+
