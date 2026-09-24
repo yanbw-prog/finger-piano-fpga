@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+<defs><style>.w{stroke:#111;stroke-width:4;fill:none}.box{stroke:#111;stroke-width:4;fill:#fff}.txt{font-family:'Microsoft YaHei','Times New Roman';font-size:28px;fill:#111}.pin{font-family:Consolas,'Microsoft YaHei';font-size:27px;fill:#111}.title{font-family:'Microsoft YaHei';font-size:38px;font-weight:bold;fill:#111}.sub{font-family:'Microsoft YaHei';font-size:23px;fill:#111}</style></defs>
+<rect width="1500" height="900" fill="white"/>
+<text x="750" y="62" text-anchor="middle" class="title">XC3S50AN数字部分顶层RTL图</text>
+<text x="750" y="102" text-anchor="middle" class="sub">只画顶层模块，不展开内部逻辑</text>
+
+<!-- top-level RTL module -->
+<rect x="460" y="190" width="580" height="525" class="box"/>
+<path d="M460 190h34l18 18h476l18-18h34" class="w"/>
+<text x="750" y="255" text-anchor="middle" class="title">finger_piano</text>
+<text x="750" y="300" text-anchor="middle" class="txt">三传感器编码手指钢琴顶层</text>
+
+<!-- inputs -->
+<line x1="225" y1="385" x2="460" y2="385" class="w"/><text x="245" y="370" class="pin">clk_2m</text><text x="245" y="410" class="sub">2 MHz时钟输入</text>
+<line x1="225" y1="500" x2="460" y2="500" class="w"/><text x="245" y="485" class="pin">rst_n</text><text x="245" y="525" class="sub">低有效复位输入</text>
+<line x1="225" y1="615" x2="460" y2="615" class="w"/><text x="245" y="600" class="pin">sensor_in[2:0]</text><text x="245" y="640" class="sub">三路传感器输入</text>
+
+<!-- outputs -->
+<line x1="1040" y1="385" x2="1275" y2="385" class="w"/><text x="1070" y="370" class="pin">audio_out</text><text x="1070" y="410" class="sub">矩形波音频输出</text>
+<line x1="1040" y1="500" x2="1275" y2="500" class="w"/><text x="1070" y="485" class="pin">sensor_led[2:0]</text><text x="1070" y="525" class="sub">三路状态指示</text>
+<line x1="1040" y1="615" x2="1275" y2="615" class="w"/><text x="1070" y="600" class="pin">note_code[2:0]</text><text x="1070" y="640" class="sub">三位音阶编码输出</text>
+
+<text x="750" y="785" text-anchor="middle" class="txt">左侧为输入端，右侧为输出端</text>
+<text x="750" y="830" text-anchor="middle" class="sub">对应ISE：Synthesize – XST → View RTL Schematic → 选择顶层模块、不继续展开</text>
+</svg>
+
