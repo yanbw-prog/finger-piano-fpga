@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950">
+  <style>
+    text{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#142033}.title{font-size:40px;font-weight:700}.sub{font-size:24px}.mod{font-size:36px;font-weight:700}.port{font-family:Consolas,"Microsoft YaHei",sans-serif;font-size:31px;font-weight:700}.hint{font-size:22px}.wire{stroke:#1c2d3f;stroke-width:4;fill:none;stroke-linecap:round}.box{fill:#f7fbff;stroke:#2469a5;stroke-width:5}.tag{fill:#e8f6ee;stroke:#157a51;stroke-width:2}.out{stroke:#c23b34;stroke-width:5;fill:none;stroke-linecap:round}
+  </style>
+  <rect width="1600" height="950" fill="white"/>
+  <text x="800" y="65" text-anchor="middle" class="title">FPGA 实际烧录顶层 RTL 图</text>
+  <text x="800" y="105" text-anchor="middle" class="sub">顶层模块：finger_piano；按要求仅画顶层端口，不展开译码和分频内部逻辑</text>
+
+  <rect x="490" y="200" width="620" height="500" rx="18" class="box"/>
+  <path d="M490 200h38l18 18h508l18-18h38" class="wire"/>
+  <text x="800" y="300" text-anchor="middle" class="mod">finger_piano</text>
+  <text x="800" y="345" text-anchor="middle" class="hint">三传感器编码手指钢琴 Verilog 顶层</text>
+  <rect x="625" y="420" width="350" height="120" rx="12" class="tag"/>
+  <text x="800" y="465" text-anchor="middle" class="hint">内部功能（不在顶层图展开）</text>
+  <text x="800" y="505" text-anchor="middle" class="hint">上电复位 · 组合译码 · 2 MHz 分频</text>
+  <text x="800" y="625" text-anchor="middle" class="hint">目标器件：XC3S50AN-5TQG144</text>
+
+  <!-- inputs -->
+  <path d="M190 330H490" class="wire"/><text x="210" y="315" class="port">clk_2m</text><text x="210" y="355" class="hint">P124：2 MHz 晶振时钟输入</text>
+  <path d="M190 430H490" class="wire"/><text x="210" y="415" class="port">A</text><text x="260" y="415" class="hint">P76：传感器1调理输出</text>
+  <path d="M190 510H490" class="wire"/><text x="210" y="495" class="port">B</text><text x="260" y="495" class="hint">P77：传感器2调理输出</text>
+  <path d="M190 590H490" class="wire"/><text x="210" y="575" class="port">C</text><text x="260" y="575" class="hint">P78：传感器3调理输出</text>
+
+  <!-- output -->
+  <path d="M1110 465H1410" class="out"/><text x="1140" y="450" class="port">audio_out</text><text x="1140" y="490" class="hint">P90：0～3.3 V 音频方波输出</text>
+
+  <rect x="160" y="755" width="1280" height="110" rx="14" fill="#fff9df" stroke="#c4981d" stroke-width="2"/>
+  <text x="195" y="797" class="hint">编码说明：A、B、C 为低有效输入；111 为静音，110、101、100、011、010、001、000 分别输出 C4、D4、E4、F4、G4、A4、B4。</text>
+  <text x="195" y="837" class="hint">图中未画 P79：P79 是 3.3 V 相关连接，不属于 Verilog 顶层端口；公共 GND 在正式系统电路图中统一表示。</text>
+</svg>
+
